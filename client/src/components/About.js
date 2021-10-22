@@ -11,7 +11,7 @@ const About = () =>{
    const history = useHistory();
    const callAboutPage = async () =>{
       try {
-            const res = await fetch('/about',{
+            const res = await fetch('/about',{ // yaha server ke 'auth.js' ke file se as api us path ke data ko get kiya hai
                method:'GET',
                headers:{
                   Accept: 'application/json',// ye liye likha hai taki cookies ko to accept kar le
@@ -22,7 +22,7 @@ const About = () =>{
                const data = await res.json();
 
                console.log(data);
-               setUserData(data);
+               setUserData(data); // yaha get kiya data direct use nahi kar sakte uske pehle state me get karna hoga isliye updated state me data ko daal diya taki current state 'userData' ko use kar data ko get kar sake
 
                if(!res.status === 200){
                   throw new Error ("unauthorized token");

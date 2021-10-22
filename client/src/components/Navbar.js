@@ -3,13 +3,13 @@ import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 // import 'bootstrap/dist/js/bootstrap';
 // import 'bootstrap/js/src/collapse';
-import {UserContext} from '../App'
+import {UserContext} from '../App'  // useContext ke ander ContextAPI dalna padta hai tabhi uski values get hongi 'state,dispatch' 
 
 const Navbar = () => {
-  const {state,dispatch} = useContext(UserContext)
+  const {state,dispatch} = useContext(UserContext) // is useContext ka prover values ko get karne ke liye useContyext ki jarurat padti hai
 
   const RenderMenu = ()=>{
-      if(state){
+      if(state){ // ab finally hume state mil gya login/logout ke page pr true/false ka type match hone pr uske according login/logout button toggle hoga
         return(
           <>
           <li className="nav-item">

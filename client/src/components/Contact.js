@@ -10,7 +10,7 @@ const Contact = () =>{
     const userContact = async () =>{
         
        try {
-             const res = await fetch('/getdata',{
+             const res = await fetch('/getdata',{ // yaha server ke 'auth.js' ke file se as api us path ke data ko get kiya hai
                 method:'GET',
                 headers:{
                    "Content-Type": "application/json"
@@ -20,7 +20,7 @@ const Contact = () =>{
                 const data = await res.json();
  
                 //console.log(data);
-                setUserData({...userData, name: data.name, email: data.email, phone:data.phone});
+                setUserData({...userData, name: data.name, email: data.email, phone:data.phone}); // yaha get kiya data direct use nahi kar sakte uske pehle state me get karna hoga isliye updated state me data ko daal diya taki current state 'userData' ko use kar data ko get kar sake
                 console.log(userData);
  
                 if(!res.status === 200){

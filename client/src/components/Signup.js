@@ -20,13 +20,13 @@ const Signup = () => {
 
               const {name, email, phone, work, password, cpassword}= user;
 
-              const res = await fetch('/register',{
+              const res = await fetch('/register',{ // yaha server ke 'auth.js' ke file se as api us path ke data ko get kiya hai
                 
                 method:'POST',
                   headers:{
                       "Content-Type" : "application/json"
                   },
-                  body: JSON.stringify({
+                  body: JSON.stringify({ // server pr jab bhi data post karte wo json nahi samajhta usko string ke form me send karte hai, 'JSON.stringify()' ye method object leta hai name, email, work, phone, password, cpassword in fields ko string ke form me send kar dega
                     name, email, work, phone, password, cpassword
                   })
               })
@@ -35,7 +35,7 @@ const Signup = () => {
 
               console.log(data);
 
-              if(res.status === 423){
+              if(res.status === 423){ // yaha jo bhi validation hai wo sab server ke file auth.js ke file pr res.status se error match kar ke error response de rahe hai
 
                 window.alert('email already exist');
 
