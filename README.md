@@ -21,6 +21,6 @@ http://merndevelopers.herokuapp.com/
 # Contact page form GET user detail from database & POST message in MongoDB
 <img width="1428" alt="Screenshot 2021-10-22 at 12 43 51 PM" src="https://user-images.githubusercontent.com/39516826/138440910-75c63d07-6ef3-4698-80ce-580c4b07feff.png">
 
-# Importand Notice:- i've not work on CSS for media query it's not responsive for mobile phone,tabs etc. always open on web for better experince i was mainly focused on bakend operatrion not on CSS.
+# Importand Notice:- i've not work on CSS for media query it's not responsive for mobile phone,tabs etc. always open on PC web for better experince i was mainly focused on bakend operatrion not on CSS.
 
 <img width="288" alt="Screenshot 2021-10-22 at 12 45 29 PM" src="https://user-images.githubusercontent.com/39516826/138441622-03148c2a-45a9-4e46-ae7e-f8157ba3204a.png">
